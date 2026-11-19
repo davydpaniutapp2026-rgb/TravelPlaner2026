@@ -36,10 +36,10 @@
 | Учасник | Роль | За що відповідає | GitHub |
 |---|---|---|---|
 | Давід | Керівник проєкту | Jira, README, звіт | [davydpaniutapp2026-rgb](https://github.com/davydpaniutapp2026-rgb) |
-| Софія | Дані й збереження | `data.js` (база міст і місць), `savePlan` / `loadPlans` / `deletePlan` | _додати посилання_ |
-| Єгор | Логіка | `calculateCost`, тести | _додати посилання_ |
-| Назар | Інтерфейс і тестування | HTML-форма, підключення, тестування на комп'ютері | _додати посилання_ |
-| Родіон | Дизайн | макети, стилі, адаптивність, тестування на телефоні | _додати посилання_ |
+| Софія | Дані й збереження | `data.js` (база міст і місць), `savePlan` / `loadPlans` / `deletePlan` | [KarnakSofia](https://github.com/KarnakSofia) |
+| Єгор | Логіка | `calculateCost`, тести | [pandokxsyt](https://github.com/pandokxsyt) |
+| Назар | Інтерфейс і тестування | HTML-форма, підключення, тестування на комп'ютері | [efremuv](https://github.com/efremuv) |
+| Родіон | Дизайн | макети, стилі, адаптивність, тестування на телефоні | [radik13131](https://github.com/radik13131) |
 
 ## Джерела
 
