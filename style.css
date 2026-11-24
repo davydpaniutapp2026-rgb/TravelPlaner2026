@@ -553,3 +553,7 @@ input.pill-control {
     justify-content: space-between;
   }
 }
+/* Дефіцит бюджету */
+.balance-bar.deficit {
+  background-color: #b14e4e;
+}
