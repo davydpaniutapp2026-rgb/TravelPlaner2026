@@ -97,7 +97,7 @@
             </div>
           </div>
 
-          <div class="form-row row-two">
+          <div class="form-row row-three">
             <!-- Осіб (1-10) -->
             <div class="field-group">
               <label for="peopleSelect" class="field-label">
@@ -105,7 +105,7 @@
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
-                <span>Осіб(1-10)</span>
+                <span>Осіб (1-10)</span>
               </label>
               <div class="select-wrapper">
                 <select id="peopleSelect" name="people" class="pill-control" required>
@@ -125,6 +125,21 @@
             </div>
 
             <div class="field-group">
+              <label for="levelSelect" class="field-label">
+                <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <span>Комфорт</span>
+              </label>
+              <div class="select-wrapper">
+                <select id="levelSelect" name="level" class="pill-control" required>
+                  <option value="economy" selected>Економ</option>
+                  <option value="comfort">Комфорт</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-group">
               <label for="currencySelect" class="field-label">
                 <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="12" y1="1" x2="12" y2="23"></line>
@@ -134,10 +149,9 @@
               </label>
               <div class="select-wrapper">
                 <select id="currencySelect" name="currency" class="pill-control" required>
-                  <option value="" disabled selected>Оберіть валюту</option>
-                  <option value="UAH">UAH (₴)</option>
+                  <option value="EUR" selected>EUR (€)</option>
                   <option value="USD">USD ($)</option>
-                  <option value="EUR">EUR (€)</option>
+                  <option value="UAH">UAH (₴)</option>
                 </select>
               </div>
             </div>
@@ -171,7 +185,7 @@
 
   <!-- Гастрономія -->
   <label class="type-pill">
-    <input type="checkbox" name="vacationType" value="gastronomy" />
+    <input type="checkbox" name="vacationType" value="food" />
     <span>
       <svg class="pill-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>
@@ -180,6 +194,7 @@
     </span>
   </label>
 </div>
+          </div>
 
           <div class="submit-wrapper">
             <button type="submit" class="btn-submit">
@@ -276,6 +291,8 @@
   </div>
 </section>
 
-  <script src="script.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/calculateCost.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
