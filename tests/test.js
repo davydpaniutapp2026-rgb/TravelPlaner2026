@@ -1,15 +1,10 @@
-// Запуск з кореня проєкту:  node tests/test.js
-const assert = require("assert");
+// Запуск: npm test  (або node --test)
+const test = require("node:test");
+const assert = require("node:assert");
 const path = require("path");
 const { calculateCost, calculateBothLevels, filterPlacesByType } =
   require(path.join(__dirname, "..", "js", "calculateCost.js"));
 const DATA = require(path.join(__dirname, "..", "js", "data.js"));
-
-let passed = 0, failed = 0;
-function test(name, fn) {
-  try { fn(); passed++; console.log("✔", name); }
-  catch (e) { failed++; console.log("✘", name, "\n   ", e.message); }
-}
 
 // ---------- Перевірка даних (data.js) ----------
 test("Дані: є base і cities", () => {
@@ -114,6 +109,3 @@ test("Економ дешевший за комфорт", () => {
     selectedPlaces: ["Парк Гуель", "Sensi Tapas"], budget: 1000 });
   assert.ok(r.economy.total < r.comfort.total);
 });
-
-console.log(`\nПройдено: ${passed}, провалено: ${failed}`);
-process.exit(failed ? 1 : 0);

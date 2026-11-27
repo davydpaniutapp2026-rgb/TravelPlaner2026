@@ -1,0 +1,12 @@
+{
+  "name": "travel-planer-2026",
+  "version": "1.0.0",
+  "description": "Планувальник подорожей: розрахунок вартості та порівняння з бюджетом",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
