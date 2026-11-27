@@ -1,10 +1,5 @@
 // calculateCost.js — розрахунок вартості подорожі та порівняння з бюджетом.
-// data.js містить чистий JSON-об'єкт (усі ціни в EUR), тому читаємо його як JSON.
-
-const fs = require("fs");
-const path = require("path");
-
-const DATA = JSON.parse(fs.readFileSync(path.join(__dirname, "data.js"), "utf8"));
+const DATA = require("./data.js"); // { base, cities } — усі ціни в EUR
 
 const LEVELS = { economy: "price_econ", comfort: "price_comf" };
 const PLACE_TYPES = ["culture", "active", "food"];
@@ -17,7 +12,7 @@ const isPositiveInt = (n) => Number.isInteger(n) && n >= 1;
  * Якщо type не передано — повертає всі місця міста.
  */
 function filterPlacesByType(city, type, data = DATA) {
-  const cityData = data[city];
+  const cityData = data.cities[city];
   if (!cityData || !Array.isArray(cityData.places)) {
     throw new Error(`Невідоме місто: ${city}`);
   }
@@ -39,7 +34,7 @@ function calculateCost(params, data = DATA) {
   const { city, days, people, level, selectedPlaces = [], budget } = params || {};
 
   // --- Валідація ---
-  if (!city || !data[city] || city === "base") throw new Error(`Невідоме місто: ${city}`);
+  if (!city || !Object.prototype.hasOwnProperty.call(data.cities, city)) throw new Error(`Невідоме місто: ${city}`);
   if (!LEVELS[level]) throw new Error(`Невідомий рівень комфорту: ${level}`);
   if (!isPositiveInt(days)) throw new Error("Кількість днів має бути цілим числом ≥ 1");
   if (!isPositiveInt(people)) throw new Error("Кількість осіб має бути цілим числом ≥ 1");
@@ -48,7 +43,7 @@ function calculateCost(params, data = DATA) {
   }
   if (!Array.isArray(selectedPlaces)) throw new Error("selectedPlaces має бути масивом");
 
-  const cityData = data[city];
+  const cityData = data.cities[city];
 
   // 1–2. Проживання: (житло + їжа + транспорт) × coef × days × people
   const perDay = data.base[level].reduce((a, c) => a + c, 0);
