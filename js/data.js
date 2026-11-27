@@ -18,41 +18,144 @@ const TRAVEL_DATA = {
   },
   "cities": {
     "Лісабон": {
-      "country": "Португалія",
       "coef": 1,
       "places": [
-        {"name": "Башта Белен", "type": "culture", "ticket": true, "price_econ": 15, "price_comf": 29, "rating": 4.5},
-        {"name": "Монастир Жеронімуш", "type": "culture", "ticket": true, "price_econ": 18, "price_comf": 31, "rating": 4.4},
-        {"name": "Замок Св. Георгія", "type": "culture", "ticket": true, "price_econ": 17, "price_comf": 23, "rating": 4.5},
-        {"name": "Трамвай 28", "type": "active", "ticket": true, "price_econ": 3, "price_comf": 3, "rating": 4.5},
-        {"name": "Пляж Кашкайш", "type": "active", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.4},
-        {"name": "Pastéis de Belém", "type": "food", "ticket": false, "price_econ": 3, "price_comf": 5.5, "rating": 4.6},
-        {"name": "Серфінг, Каркавелуш", "type": "active", "ticket": false, "price_econ": 30, "price_comf": 42, "rating": 4.8},
-        {"name": "Time Out Market", "type": "food", "ticket": false, "price_econ": 15, "price_comf": 25, "rating": 4.4},
-        {"name": "Palácio Chiado", "type": "food", "ticket": false, "price_econ": 40, "price_comf": 70, "rating": 4.3}
+        { "name": "Башта Белен", "type": "culture", "ticket": true, "price_econ": 15, "price_comf": 29, "rating": 4.5 },
+        { "name": "Монастир Жеронімуш", "type": "culture", "ticket": true, "price_econ": 18, "price_comf": 31, "rating": 4.4 },
+        { "name": "Замок Св. Георгія", "type": "culture", "ticket": true, "price_econ": 17, "price_comf": 23, "rating": 4.5 },
+        { "name": "Трамвай 28", "type": "active", "ticket": true, "price_econ": 3, "price_comf": 3, "rating": 4.5 },
+        { "name": "Пляж Кашкайш", "type": "active", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.4 },
+        { "name": "Pastéis de Belém", "type": "food", "ticket": false, "price_econ": 3, "price_comf": 5.5, "rating": 4.6 },
+        { "name": "Серфінг, Каркавелуш", "type": "active", "ticket": false, "price_econ": 30, "price_comf": 42, "rating": 4.8 },
+        { "name": "Time Out Market", "type": "food", "ticket": false, "price_econ": 15, "price_comf": 25, "rating": 4.4 },
+        { "name": "Palácio Chiado", "type": "food", "ticket": false, "price_econ": 40, "price_comf": 70, "rating": 4.3 }
       ]
     },
     "Барселона": {
-      "country": "Іспанія",
       "coef": 1.2,
       "places": [
-        {"name": "Храм Святого Сімейства", "type": "culture", "ticket": true, "price_econ": 26, "price_comf": 40, "rating": 4.8},
-        {"name": "Музей Пікассо", "type": "culture", "ticket": true, "price_econ": 12, "price_comf": 12, "rating": 4.4},
-        {"name": "Парк Гуель", "type": "culture", "ticket": true, "price_econ": 18, "price_comf": 18, "rating": 4.4},
-        {"name": "Будинок Міла", "type": "culture", "ticket": true, "price_econ": 25, "price_comf": 25, "rating": 4.6},
-        {"name": "Готичний квартал", "type": "culture", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.6},
-        {"name": "Пляж Барселонета", "type": "active", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.4},
-        {"name": "Монсеррат", "type": "active", "ticket": true, "price_econ": 20, "price_comf": 40, "rating": 4.6},
-        {"name": "Бункери Кармель", "type": "active", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.6},
-        {"name": "Велопрогулянка містом", "type": "active", "ticket": false, "price_econ": 15, "price_comf": 15, "rating": 4.7},
-        {"name": "Ринок Бокерія", "type": "food", "ticket": false, "price_econ": 15, "price_comf": 35, "rating": 4.5},
-        {"name": "Sensi Tapas", "type": "food", "ticket": false, "price_econ": 20, "price_comf": 40, "rating": 4.8},
-        {"name": "Ринок Санта-Катерина", "type": "food", "ticket": false, "price_econ": 15, "price_comf": 25, "rating": 4.4},
-        {"name": "El Nacional Barcelona", "type": "food", "ticket": false, "price_econ": 20, "price_comf": 50, "rating": 4.5}
+        { "name": "Храм Святого Сімейства", "type": "culture", "ticket": true, "price_econ": 26, "price_comf": 40, "rating": 4.8 },
+        { "name": "Музей Пікассо", "type": "culture", "ticket": true, "price_econ": 12, "price_comf": 12, "rating": 4.4 },
+        { "name": "Парк Гуель", "type": "culture", "ticket": true, "price_econ": 18, "price_comf": 18, "rating": 4.4 },
+        { "name": "Будинок Міла", "type": "culture", "ticket": true, "price_econ": 25, "price_comf": 25, "rating": 4.6 },
+        { "name": "Готичний квартал", "type": "culture", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.6 },
+        { "name": "Пляж Барселонета", "type": "active", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.4 },
+        { "name": "Монсеррат", "type": "active", "ticket": true, "price_econ": 20, "price_comf": 40, "rating": 4.6 },
+        { "name": "Бункери Кармель", "type": "active", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.6 },
+        { "name": "Велопрогулянка містом", "type": "active", "ticket": false, "price_econ": 15, "price_comf": 15, "rating": 4.7 },
+        { "name": "Ринок Бокерія", "type": "food", "ticket": false, "price_econ": 15, "price_comf": 35, "rating": 4.5 },
+        { "name": "Sensi Tapas", "type": "food", "ticket": false, "price_econ": 20, "price_comf": 40, "rating": 4.8 },
+        { "name": "Ринок Санта-Катерина", "type": "food", "ticket": false, "price_econ": 15, "price_comf": 25, "rating": 4.4 },
+        { "name": "El Nacional Barcelona", "type": "food", "ticket": false, "price_econ": 20, "price_comf": 50, "rating": 4.5 }
+      ]
+    },
+    "Рим": {
+      "coef": 1.1,
+      "places": [
+        { "name": "Колізей", "type": "culture", "ticket": true, "price_econ": 18, "price_comf": 24, "rating": 4.8 },
+        { "name": "Собор Св. Петра", "type": "culture", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.8 },
+        { "name": "Римський форум", "type": "culture", "ticket": true, "price_econ": 18, "price_comf": 18, "rating": 4.8 },
+        { "name": "Сікстинська капела", "type": "culture", "ticket": true, "price_econ": 25, "price_comf": 33, "rating": 4.3 },
+        { "name": "Кампо-деї-Фьорі", "type": "food", "ticket": false, "price_econ": 10, "price_comf": 25, "rating": 4.4 },
+        { "name": "Pastasciutta", "type": "food", "ticket": false, "price_econ": 8, "price_comf": 15, "rating": 4.7 },
+        { "name": "Dar Filettaro a Santa Barbara", "type": "food", "ticket": false, "price_econ": 10, "price_comf": 20, "rating": 4.4 },
+        { "name": "Ринок Тріонфале", "type": "food", "ticket": false, "price_econ": 8, "price_comf": 22, "rating": 4.5 },
+        { "name": "Остія-Антіка", "type": "active", "ticket": true, "price_econ": 18, "price_comf": 18, "rating": 4.7 },
+        { "name": "Трастевере", "type": "active", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.6 },
+        { "name": "Квартал Коппеде", "type": "active", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.6 }
+      ]
+    },
+    "Париж": {
+      "coef": 1.3,
+      "places": [
+        { "name": "Ейфелева вежа", "type": "culture", "ticket": true, "price_econ": 14.8, "price_comf": 36.7, "rating": 4.7 },
+        { "name": "Лувр", "type": "culture", "ticket": true, "price_econ": 32, "price_comf": 32, "rating": 4.7 },
+        { "name": "Музей Орсе", "type": "culture", "ticket": true, "price_econ": 14, "price_comf": 17.5, "rating": 4.8 },
+        { "name": "Сент-Шапель", "type": "culture", "ticket": true, "price_econ": 22, "price_comf": 22, "rating": 4.6 },
+        { "name": "Музей Оранжері", "type": "culture", "ticket": true, "price_econ": 11, "price_comf": 13.5, "rating": 4.6 },
+        { "name": "Berthillon", "type": "food", "ticket": false, "price_econ": 13, "price_comf": 18.5, "rating": 4.5 },
+        { "name": "Bouillon Chartier", "type": "food", "ticket": false, "price_econ": 10, "price_comf": 20, "rating": 4.5 },
+        { "name": "Du Pain et des Idées", "type": "food", "ticket": false, "price_econ": 10, "price_comf": 20, "rating": 4.4 },
+        { "name": "Breizh Café", "type": "food", "ticket": false, "price_econ": 18, "price_comf": 35, "rating": 4.3 },
+        { "name": "Версаль", "type": "active", "ticket": true, "price_econ": 25, "price_comf": 32, "rating": 4.6 },
+        { "name": "Монмартр", "type": "active", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.6 },
+        { "name": "Катакомби Парижа", "type": "active", "ticket": true, "price_econ": 25, "price_comf": 31, "rating": 4.6 },
+        { "name": "Круїз по Сені", "type": "active", "ticket": true, "price_econ": 17, "price_comf": 25, "rating": 4.4 }
+      ]
+    },
+    "Стамбул": {
+      "coef": 0.75,
+      "places": [
+        { "name": "Софійський собор", "type": "culture", "ticket": true, "price_econ": 29, "price_comf": 32.5, "rating": 4.8 },
+        { "name": "Палац Топкапи", "type": "culture", "ticket": true, "price_econ": 19, "price_comf": 50, "rating": 4.6 },
+        { "name": "Цистерна Базиліка", "type": "culture", "ticket": true, "price_econ": 42, "price_comf": 42, "rating": 4.6 },
+        { "name": "Блакитна мечеть", "type": "culture", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.7 },
+        { "name": "Çiya Sofrası", "type": "food", "ticket": false, "price_econ": 15, "price_comf": 25, "rating": 4.0 },
+        { "name": "Karaköy Güllüoğlu", "type": "food", "ticket": false, "price_econ": 8, "price_comf": 12, "rating": 4.4 },
+        { "name": "Eminönü Balık Ekmek", "type": "food", "ticket": false, "price_econ": 3, "price_comf": 6, "rating": 3.6 },
+        { "name": "Круїз Босфором", "type": "active", "ticket": true, "price_econ": 16, "price_comf": 26, "rating": 4.5 },
+        { "name": "Пором до Кадикьой", "type": "active", "ticket": true, "price_econ": 1.2, "price_comf": 1.2, "rating": 4.6 },
+        { "name": "Галатська вежа й Галата", "type": "active", "ticket": true, "price_econ": 30, "price_comf": 35, "rating": 4.6 },
+        { "name": "Хамам Çemberlitaş", "type": "active", "ticket": true, "price_econ": 55, "price_comf": 68, "rating": 4.4 }
+      ]
+    },
+    "Будапешт": {
+      "coef": 0.8,
+      "places": [
+        { "name": "Будинок парламенту", "type": "culture", "ticket": true, "price_econ": 38, "price_comf": 60, "rating": 4.8 },
+        { "name": "Будайський замок", "type": "culture", "ticket": true, "price_econ": 0, "price_comf": 22, "rating": 4.7 },
+        { "name": "Церква Матяша", "type": "culture", "ticket": true, "price_econ": 9, "price_comf": 22, "rating": 4.8 },
+        { "name": "Велика синагога на вулиці Дохань", "type": "culture", "ticket": true, "price_econ": 40, "price_comf": 40, "rating": 4.3 },
+        { "name": "Центральний ринок", "type": "food", "ticket": false, "price_econ": 15, "price_comf": 25, "rating": 4.5 },
+        { "name": "Gettó Gulyás", "type": "food", "ticket": false, "price_econ": 10, "price_comf": 20, "rating": 4.6 },
+        { "name": "Café Gerbeaud", "type": "food", "ticket": false, "price_econ": 12, "price_comf": 25, "rating": 4.1 },
+        { "name": "Szimpla Kert", "type": "food", "ticket": false, "price_econ": 6, "price_comf": 20, "rating": 4.6 },
+        { "name": "Термальні лазні Сечені", "type": "active", "ticket": true, "price_econ": 35, "price_comf": 35, "rating": 4.3 },
+        { "name": "Круїз по Дунаю", "type": "active", "ticket": true, "price_econ": 9, "price_comf": 15, "rating": 4.4 },
+        { "name": "Гора Геллерт", "type": "active", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.7 },
+        { "name": "Острів Маргарити", "type": "active", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.7 }
+      ]
+    },
+    "Відень": {
+      "coef": 1.3,
+      "places": [
+        { "name": "Палац Шенбрунн", "type": "culture", "ticket": true, "price_econ": 30, "price_comf": 42, "rating": 4.7 },
+        { "name": "Палац Бельведер", "type": "culture", "ticket": true, "price_econ": 20, "price_comf": 23, "rating": 4.7 },
+        { "name": "Собор Святого Стефана", "type": "culture", "ticket": true, "price_econ": 25, "price_comf": 25, "rating": 4.7 },
+        { "name": "Віденська державна опера", "type": "culture", "ticket": true, "price_econ": 18, "price_comf": 18, "rating": 4.7 },
+        { "name": "Café Central", "type": "food", "ticket": false, "price_econ": 12, "price_comf": 22, "rating": 4.4 },
+        { "name": "Figlmüller", "type": "food", "ticket": false, "price_econ": 22, "price_comf": 40, "rating": 4.3 },
+        { "name": "Naschmarkt", "type": "food", "ticket": false, "price_econ": 12, "price_comf": 30, "rating": 3.6 },
+        { "name": "Demel", "type": "food", "ticket": false, "price_econ": 12, "price_comf": 25, "rating": 4.2 },
+        { "name": "Прогулянка по Рінгштрассе на трамваї", "type": "active", "ticket": true, "price_econ": 3, "price_comf": 10, "rating": 4.6 },
+        { "name": "Музейний квартал", "type": "active", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.6 },
+        { "name": "Прогулянка по Пратеру й колесо огляду", "type": "active", "ticket": true, "price_econ": 14.5, "price_comf": 25, "rating": 4.5 },
+        { "name": "Виноградники Каленберґ і Гринцинг", "type": "active", "ticket": false, "price_econ": 20, "price_comf": 40, "rating": 4.6 }
+      ]
+    },
+    "Амстердам": {
+      "coef": 1.4,
+      "places": [
+        { "name": "Рейксмузеум", "type": "culture", "ticket": true, "price_econ": 27, "price_comf": 27, "rating": 4.7 },
+        { "name": "Музей Ван Гога", "type": "culture", "ticket": true, "price_econ": 27, "price_comf": 31, "rating": 4.6 },
+        { "name": "Будинок Анни Франк", "type": "culture", "ticket": true, "price_econ": 16.5, "price_comf": 16.5, "rating": 4.5 },
+        { "name": "Будинок-музей Рембрандта", "type": "culture", "ticket": true, "price_econ": 19.5, "price_comf": 19.5, "rating": 4.5 },
+        { "name": "Foodhallen", "type": "food", "ticket": false, "price_econ": 12, "price_comf": 22, "rating": 4.4 },
+        { "name": "Winkel 43", "type": "food", "ticket": false, "price_econ": 10, "price_comf": 20, "rating": 4.5 },
+        { "name": "Ринок Albert Cuyp", "type": "food", "ticket": false, "price_econ": 8, "price_comf": 15, "rating": 4.5 },
+        { "name": "The Pancake Bakery", "type": "food", "ticket": false, "price_econ": 12, "price_comf": 20, "rating": 4.3 },
+        { "name": "Круїз каналами", "type": "active", "ticket": true, "price_econ": 18, "price_comf": 35, "rating": 4.5 },
+        { "name": "Велопрогулянка Вонделпарком", "type": "active", "ticket": false, "price_econ": 12, "price_comf": 20, "rating": 4.6 },
+        { "name": "Прогулянка кварталом Йордан", "type": "active", "ticket": false, "price_econ": 0, "price_comf": 0, "rating": 4.7 },
+        { "name": "Поїздка до Заансе-Сханс", "type": "active", "ticket": true, "price_econ": 8, "price_comf": 10, "rating": 4.5 }
       ]
     }
   }
 };
+
+if (typeof window !== "undefined") {
+  window.TRAVEL_DATA = TRAVEL_DATA;
+}
 
 if (typeof module !== "undefined" && module.exports) {
   module.exports = TRAVEL_DATA;

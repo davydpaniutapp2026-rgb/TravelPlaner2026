@@ -1,0 +1,493 @@
+/* =========================================================
+   TripPlanner
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Eczar&family=Noto+Sans:wght@400;500&display=swap");
+
+:root {
+  --text-1: #173B35;      /* темно-зелений текст */
+  --text-2: #FEFAE0;      /* кремовий текст */
+  --accent: #1F5C4D;      /* головна кнопка */
+  --mint: #6EA698;        /* бейджі, смуга залишку */
+  --mint-light: #BDE5D3;  /* плашки з ціною */
+  --card: #DCE8E3;        /* рядки і картки */
+  --field: #F7F7F5;       /* поля вводу */
+  --chip: #E0E0E0;        /* кнопки типу відпочинку */
+  --placeholder: #D9D9D9; /* заглушка під фото */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  color: var(--text-1);
+}
+
+/* =========================================================
+   ГОЛОВНА (стартовий екран) 
+   ========================================================= */
+.main {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  background: url("images/tumanna-girska-dolyna.png") center / cover no-repeat;
+}
+
+.main__logo-icon {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  left: 17px;
+  top: 18px;
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+
+.main__logo-text {
+  position: absolute;
+  width: 221px;
+  height: 55px;
+  left: 97px;
+  top: 18px;
+  font-family: "Eczar", serif;
+  font-size: 36px;
+  line-height: 64px;
+  color: var(--text-1);
+}
+
+.main__title {
+  position: absolute;
+  width: 1217px;
+  height: 104px;
+  left: 112px;
+  top: 378px;
+  font-family: "Baskervville SC", serif;
+  font-size: 80.4375px;
+  line-height: 104px;
+  color: var(--text-2);
+}
+
+.main__subtitle {
+  position: absolute;
+  width: 1077px;
+  height: 39px;
+  left: 182px;
+  top: 482px;
+  font-family: "Baskervville SC", serif;
+  font-size: 30.2198px;
+  line-height: 39px;
+  color: var(--text-2);
+}
+
+.main__btn {
+  position: absolute;
+  width: 352px;
+  height: 82px;
+  left: 544px;
+  top: 612px;
+  background: rgba(217, 217, 217, 0.75);
+  border-radius: 41px;
+}
+
+.main__btn-text {
+  position: absolute;
+  width: 263px;
+  height: 64px;
+  left: 588px;
+  top: 625px;
+  font-family: "Eczar", serif;
+  font-size: 36px;
+  line-height: 64px;
+  color: var(--text-1);
+}
+
+/* =========================================================
+   ФРЕЙМ 2 — форма планування подорожі (1440 × 1024)
+   ========================================================= */
+.planner {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(10, 30, 28, 0.35), rgba(10, 30, 28, 0.35)),
+    url("images/tumanna-girska-dolyna.png") center / cover no-repeat;
+}
+
+/* --- шапка --- */
+.planner__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 95px;
+  background: rgba(23, 59, 53, 0.7);
+  backdrop-filter: blur(6px);
+}
+
+.planner__logo-icon {
+  position: absolute;
+  left: 38px;
+  top: 30px;
+  width: 33px;
+  height: 33px;
+}
+
+.planner__logo-text {
+  position: absolute;
+  left: 95px;
+  top: 28px;
+  font-family: "Eczar", serif;
+  font-size: 36px;
+  line-height: 44px;
+  color: var(--text-2);
+}
+
+.planner__nav {
+  position: absolute;
+  top: 34px;
+  right: 50px;
+  display: flex;
+  gap: 26px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.planner__nav a {
+  color: var(--text-2);
+  text-decoration: none;
+}
+
+.planner__nav a.is-active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+/* --- заголовок --- */
+.planner__pin {
+  position: absolute;
+  left: 85px;
+  top: 155px;
+  width: 58px;
+  height: 74px;
+}
+
+.planner__title {
+  position: absolute;
+  left: 162px;
+  top: 142px;
+  margin: 0;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 86px;
+  color: var(--text-2);
+}
+
+.planner__subtitle {
+  position: absolute;
+  left: 162px;
+  top: 216px;
+  margin: 0;
+  font-size: 30px;
+  line-height: 40px;
+  color: var(--text-2);
+}
+
+/* --- біла напівпрозора панель --- */
+.planner__panel {
+  position: absolute;
+  left: 120px;
+  top: 288px;
+  width: 1200px;
+  height: 651px;
+  background: rgba(232, 232, 222, 0.78);
+  backdrop-filter: blur(10px);
+  border-radius: 80px;
+}
+
+/* --- поля (мітка + select) --- */
+.field {
+  position: absolute;
+  width: 345px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.field__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--text-1);
+}
+
+.field__select {
+  width: 100%;
+  height: 60px;
+  padding: 0 40px 0 15px;
+  border: none;
+  border-radius: 30px;
+  background: var(--field);
+  font-family: inherit;
+  font-size: 20px;
+  color: #555;
+  appearance: none;
+  background-image: url("images/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+
+/* позиції відносно .planner__panel */
+.field--city   { left: 63px;  top: 70px; }
+.field--days   { left: 428px; top: 70px; }
+.field--budget { left: 793px; top: 70px; }
+.field--people { left: 236px; top: 203px; }
+.field--currency { left: 620px; top: 203px; }
+
+/* --- роздільник --- */
+.planner__divider {
+  position: absolute;
+  left: 52px;
+  top: 345px;
+  width: 1130px;
+  height: 3px;
+  background: #7a7a7a;
+  border: none;
+  margin: 0;
+}
+
+.planner__type-title {
+  position: absolute;
+  left: 111px;
+  top: 372px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--text-1);
+}
+
+/* --- кнопки типу відпочинку --- */
+.chip {
+  position: absolute;
+  width: 270px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 28px;
+  background: var(--chip);
+  font-family: inherit;
+  font-size: 24px;
+  color: var(--text-1);
+  cursor: pointer;
+}
+
+.chip--culture  { left: 146px; top: 436px; }
+.chip--active   { left: 476px; top: 439px; }
+.chip--gastro   { left: 793px; top: 440px; }
+
+.chip.is-selected {
+  background: var(--mint-light);
+}
+
+/* --- головна кнопка --- */
+.planner__submit {
+  position: absolute;
+  left: 475px;
+  top: 543px;
+  width: 251px;
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 37px;
+  background: var(--accent);
+  font-family: inherit;
+  font-size: 24px;
+  color: var(--text-2);
+  cursor: pointer;
+}
+
+/* =========================================================
+   ФРЕЙМ 3 — бюджет і маршрут (1440 × 2048)
+   ========================================================= */
+.result {
+  position: relative;
+  width: 1440px;
+  height: 2048px;
+  overflow: hidden;
+  background: url("images/tumanna-girska-dolyna.png") center / cover no-repeat;
+}
+
+.result__panel {
+  position: absolute;
+  left: 69px;
+  top: 57px;
+  width: 1269px;
+  height: 1848px;
+  background: rgba(232, 232, 222, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 56px;
+}
+
+/* --- рядки бюджету --- */
+.budget-row {
+  position: absolute;
+  left: 71px;
+  width: 1153px;
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 0 28px;
+  border: 1px solid #666;
+  border-radius: 37px;
+  background: var(--card);
+  font-size: 24px;
+  color: var(--text-1);
+}
+
+.budget-row__name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.budget-row--stay      { top: 171px; }
+.budget-row--food      { top: 264px; }
+.budget-row--transport { top: 357px; }
+.budget-row--tickets   { top: 450px; }
+.budget-row--total     { top: 543px; }
+
+/* плашка з ціною */
+.price {
+  min-width: 180px;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border-radius: 29px;
+  background: var(--mint-light);
+  font-size: 24px;
+  color: var(--text-1);
+}
+
+/* залишок бюджету */
+.budget-left {
+  position: absolute;
+  left: 71px;
+  top: 647px;
+  width: 1153px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 28px;
+  border-radius: 40px;
+  background: var(--mint);
+  font-size: 24px;
+  color: var(--text-1);
+}
+
+/* --- маршрут --- */
+.route__title {
+  position: absolute;
+  left: 100px;
+  top: 836px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 80px;
+  color: var(--text-1);
+}
+
+.day-card {
+  position: absolute;
+  left: 96px;
+  width: 1110px;
+  height: 204px;
+  border-radius: 45px;
+  background: var(--card);
+}
+
+.day-card:nth-of-type(1) { top: 894px; }
+.day-card:nth-of-type(2) { top: 1118px; }
+.day-card:nth-of-type(3) { top: 1342px; }
+.day-card:nth-of-type(4) { top: 1566px; }
+
+.day-card__photo {
+  position: absolute;
+  left: 32px;
+  top: 26px;
+  width: 204px;
+  height: 154px;
+  border-radius: 22px;
+  background: var(--placeholder);
+  object-fit: cover;
+}
+
+.day-card__badge {
+  position: absolute;
+  left: 280px;
+  top: 22px;
+  width: 120px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 23px;
+  background: var(--mint);
+  font-size: 23px;
+  color: var(--text-2);
+}
+
+/* вертикальна лінія справа */
+.day-card__divider {
+  position: absolute;
+  left: 868px;
+  top: 22px;
+  width: 2px;
+  height: 160px;
+  background: #8a8a8a;
+}
+
+.day-card__price {
+  position: absolute;
+  left: 893px;
+  width: 180px;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 29px;
+  background: var(--mint-light);
+  font-size: 23px;
+  color: var(--text-1);
+}
+
+.day-card__price--1 { top: 22px; }
+.day-card__price--2 { top: 89px; }
+
+.day-card__star {
+  position: absolute;
+  left: 930px;
+  top: 150px;
+  width: 34px;
+  height: 34px;
+}
