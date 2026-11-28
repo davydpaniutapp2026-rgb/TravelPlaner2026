@@ -557,3 +557,36 @@ input.pill-control {
 .balance-bar.deficit {
   background-color: #b14e4e;
 }
+
+/* Порівняння рівнів комфорту */
+.level-compare {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.level-col {
+  background-color: #e0eae5;
+  border: 2px solid #c2cdc6;
+  border-radius: 28px;
+  padding: 18px 22px;
+}
+
+.level-col.selected {
+  border-color: #649688;
+}
+
+.level-col h3 {
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  color: #1a3c30;
+  margin-bottom: 8px;
+}
+
+.level-col .status.ok { color: #2f6b56; font-weight: 600; }
+.level-col .status.bad { color: #b14e4e; font-weight: 600; }
+
+@media (max-width: 820px) {
+  .level-compare { grid-template-columns: 1fr; }
+}
